@@ -1,0 +1,33 @@
+//
+//  Sutinky.swift
+//  Sutikny
+//
+//  Created by Dmytro Skorokhod on 30.12.2024.
+//
+import SwiftUI
+
+struct SutinkyCalendarView: View {
+    @State private var viewModel = ViewModel()
+
+    init() {
+        viewModel.dateFormatter.dateFormat = "MMMM yyyy"
+    }
+
+    var body: some View {
+        VStack {
+            MonthAndYearHeaderView(viewModel: viewModel)
+            
+            WeekdaysHeaderView(viewModel: viewModel)
+            
+            DaysOfMonthView(viewModel: viewModel)
+            
+            NavigationButtonsView(viewModel: viewModel)
+        }
+    }
+}
+
+struct SutinkyCalendarView_Previews: PreviewProvider {
+    static var previews: some View {
+        SutinkyCalendarView()
+    }
+}
