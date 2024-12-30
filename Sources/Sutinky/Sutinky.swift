@@ -6,14 +6,14 @@
 //
 import SwiftUI
 
-struct SutinkyCalendarView: View {
+public struct SutinkyCalendarView: View {
     @State private var viewModel = ViewModel()
 
     init() {
         viewModel.dateFormatter.dateFormat = "MMMM yyyy"
     }
 
-    var body: some View {
+    public var body: some View {
         VStack {
             MonthAndYearHeaderView(viewModel: viewModel)
             
