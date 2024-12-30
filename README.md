@@ -11,12 +11,14 @@ The library is available in Swift Package Manager.
 File -> Add Package Dependencies... -> https://github.com/D-Integral/Sutinky.git
 
 2)
-import Sutinky
+<code>import Sutinky</code>
 
 3)
-    var body: some View {
-        SutinkyCalendarView()
-    }
+<code>
+var body: some View {
+    SutinkyCalendarView()
+}
+</code>
 
 # Participation
 
