@@ -13,13 +13,14 @@ let package = Package(
             targets: ["Sutinky"]),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "Sutinky"),
-        .testTarget(
-            name: "SutinkyTests",
-            dependencies: ["Sutinky"]
-        ),
-    ]
+            .target(
+                name: "Sutinky",  // This should match the directory name
+                path: "Sources/Sutinky"  // Path to your source files
+            ),
+            .testTarget(
+                name: "SutinkyTests",  // Test target name
+                dependencies: ["Sutinky"],  // Dependency to the Sutinky target
+                path: "Tests/SutinkyTests"  // Path to test files
+            ),
+        ]
 )
