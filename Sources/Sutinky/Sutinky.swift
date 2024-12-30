@@ -9,7 +9,7 @@ import SwiftUI
 public struct SutinkyCalendarView: View {
     @State private var viewModel = ViewModel()
 
-    init() {
+    public init() {
         viewModel.dateFormatter.dateFormat = "MMMM yyyy"
     }
 
